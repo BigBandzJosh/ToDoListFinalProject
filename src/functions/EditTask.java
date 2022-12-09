@@ -9,9 +9,10 @@ public class EditTask {
 
     public static void EditingTask(ArrayList<String> TaskTitle,ArrayList<String> Description,ArrayList<String> DueDate, ArrayList<String> Status) {
         Scanner input = new Scanner(System.in);
-        System.out.println("which task would you like to edit?");
-        int TaskNumber = input.nextInt();
-        input.nextLine();
+        try {
+            System.out.println("which task would you like to edit?");
+            int TaskNumber = input.nextInt();
+            input.nextLine();
             System.out.println("Enter the title of your task: ");
             String Task = input.nextLine();
             TaskTitle.set(TaskNumber, Task);
@@ -23,5 +24,8 @@ public class EditTask {
             DueDate.set(TaskNumber, TaskDueDate);
             Status.set(TaskNumber, "Not Done Yet!");
             System.out.println("Your task has been edited!");
+        } catch (Exception e) {
+            System.out.println("There are no tasks to edit!");
+        }
     }
 }

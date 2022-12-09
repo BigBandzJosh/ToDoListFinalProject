@@ -12,6 +12,8 @@ public class AddTask {
         SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
         System.out.println("Enter how many tasks you have: ");
+        try {
+
         int TaskNumber = input.nextInt();
         input.nextLine();
         for (int i = 0; i < TaskNumber; i++) {
@@ -33,7 +35,9 @@ public class AddTask {
             System.out.println("Enter the status of your task: ");
             Status.add("Not Done Yet!");
             System.out.println("Your task has been added!");
-
+        }
+        } catch (Exception e) {
+            System.out.println("Something went wrong! Try again!");
         }
         }
 }

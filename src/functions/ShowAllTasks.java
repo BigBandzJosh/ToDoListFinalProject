@@ -15,7 +15,7 @@ public class ShowAllTasks {
             System.out.println("|"+"Task number: n"+"|"+ space +"|"+"TaskTitle" +"|"+ space + "|"+"Description" +"|"+ space + "|"+"DueDate" +"|"+ space + "|"+"Status"+"|");
 
             for (int i = 0; i < Status.size(); i++) {
-                String header = "|"+"Task number:"+ i +"|"+space+"|"+TaskTitle.get(i) +"|"+ space + "|"+Description.get(i) + "|"+space +"|"+ DueDate.get(i) +"|"+ space + "|"+Status.get(i)+"|";
+                String header = "|"+"Task number:"+ (i+1) +"|"+space+"|"+TaskTitle.get(i) +"|"+ space + "|"+Description.get(i) + "|"+space +"|"+ DueDate.get(i) +"|"+ space + "|"+Status.get(i)+"|";
                 System.out.println(header);
             }
         } catch (Exception e) {
