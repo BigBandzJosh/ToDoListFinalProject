@@ -10,7 +10,5 @@ public class MarkAsDone {
         int TaskNumber = input.nextInt();
             Status.set(TaskNumber, "Done!");
             System.out.println("Your task has been marked as done!");
-
-
     }
 }
